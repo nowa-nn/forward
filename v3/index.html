@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Автошкола Форвард в Нижнем Новгороде - Сдайте на права с первого раза</title>
+    <meta
+      name="description"
+      content="Официальная автошкола Форвард в Нижнем Новгороде. 13 автошкол в 7 районах города. Обучение на категорию B за 36 000 ₽."
+    />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="theme-color" content="#ffffff" />
+    <script>
+      // Блокировка масштабирования по Ctrl+колесико и Ctrl +/-
+      window.addEventListener('wheel', function(e) {
+        if (e.ctrlKey) {
+          e.preventDefault();
+        }
+      }, { passive: false });
+
+      window.addEventListener('keydown', function(e) {
+        if ((e.ctrlKey || e.metaKey) && (e.key === '+' || e.key === '-' || e.key === '=' || e.key === '0')) {
+          e.preventDefault();
+        }
+      });
+
+      // Адаптация масштаба: при Windows scale 100% и 150% сайт выглядит в точности как на 125%
+      (function() {
+        function adjustDpiScale() {
+          var isMobile = window.innerWidth <= 768 || /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+          if (isMobile) {
+            if (document.body) document.body.style.zoom = '';
+            return;
+          }
+          var dpr = window.devicePixelRatio || 1;
+          if (Math.abs(dpr - 1.25) <= 0.05) {
+            if (document.body) document.body.style.zoom = '';
+          } else if (dpr >= 0.9 && dpr <= 1.6) {
+            if (document.body) document.body.style.zoom = String(1.25 / dpr);
+          } else {
+            if (document.body) document.body.style.zoom = '';
+          }
+        }
+
+        if (document.readyState === 'loading') {
+          document.addEventListener('DOMContentLoaded', adjustDpiScale);
+        } else {
+          adjustDpiScale();
+        }
+        window.addEventListener('resize', adjustDpiScale);
+      })();
+    </script>
+  </head>
+  <body class="bg-white text-slate-900 font-sans antialiased selection:bg-brand-500 selection:text-white">
+    <div id="app"></div>
+    <script type="module" src="/src/variant3/main.js"></script>
+  </body>
+</html>
