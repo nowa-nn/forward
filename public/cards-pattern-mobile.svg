@@ -8,24 +8,7 @@
   <!-- Base background -->
   <rect width="390" height="1200" fill="#f1f3f5" />
 
-  <!-- Concentric Rings (Top Right - behind heading) -->
-  <g class="ring" transform="translate(370, 70)">
-    <circle r="40" />
-    <circle r="70" />
-    <circle r="100" />
-    <circle r="130" />
-    <circle r="160" />
-    <circle r="190" />
-    <circle r="220" />
-    <circle r="250" />
-    <circle r="280" />
-    <circle r="310" />
-    <circle r="340" />
-    <circle r="370" />
-    <circle r="400" />
-  </g>
-
-  <!-- Concentric Rings (Middle/Bottom Left - behind cards) -->
+  <!-- Concentric Rings (Bottom Left - behind/around cards) -->
   <g class="ring" transform="translate(30, 850)">
     <circle r="40" />
     <circle r="70" />
